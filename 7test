@@ -1,0 +1,41 @@
+#!/bin/bash
+# str=$"Hello World"
+# 
+# # test -z "$str"
+# # test -n "$str"
+# 
+# if test -z "$str"
+# then 
+# 	echo The str is not empty
+# else
+# 	echo The str is empty
+# fi
+# echo outside the if statement
+
+#!/bin/bash
+# str="Hello World"
+# 
+# if test -z "$str"
+# then
+#     echo "The str is empty"
+# else
+#     echo "The str is not empty"
+#     echo The string is "\"$str\""
+# fi
+# 
+# echo "outside the if statement"
+# 
+
+str=$"Hello World"
+
+if [ -z "$str" ]
+then
+	echo The string is empty
+else
+	echo The string is not empty
+	echo The string is "\"$str\""
+fi
+
+echo outside the if statement
+
+

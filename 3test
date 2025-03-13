@@ -1,0 +1,4 @@
+cat << EOF > mytest.txt
+Hello World!
+This is a test file.
+EOF

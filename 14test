@@ -1,0 +1,232 @@
+#!/bin/bash
+# fac=1
+# for (( number=1; number <= $1; number++ ))
+# do
+# 	fac=$[ $fac * $number ]
+# done
+# 
+# echo The fac of $1 is $fac
+# exit
+
+# product=$[ $1 * $2 ]
+# echo The fist parameter is $1
+# echo The second parameter is $2
+# echo The product value is $product
+# exit
+
+# echo Hello $1, glad to meet you.
+# exit
+
+# product=$[ ${10} * ${11} ]
+# echo The tenth parameter is ${10}.
+# echo The eleventh parameter is ${11}.
+# echo The product value is $product.
+# exit
+
+
+# name=$(basename $0)
+# echo This $name ran at $(date) >> $HOME/test_shell/scripttrack.log
+# exit
+
+
+# if [ -n "$1" ]
+# then
+# 	fac=1
+# 	for (( number = 1; number <= $1; number++ ))
+# 	do
+# 		fac=$[ $fac * $number ]
+# 	done
+# 	echo The fac of $1 is $fac
+# else
+# 	echo "You did not provide a parameter."
+# fi
+# exit
+
+
+# if [ $# -eq 0 ]
+# then
+# 	echo "Please provide at least one parameter."
+# 	exit
+# elif [ $# -eq 1 ]
+# then
+# 	fragment="parameter was"
+# else
+# 	fragmetn="parameter were"
+# fi
+# echo $# $fragment supplied
+# exit
+
+
+# if [ $# -ne 2 ]
+# then
+# 	echo Usage: $(basename $0) parameter1 parameter2
+# else
+# 	total=$[ $1 + $2 ]
+# 	echo $1 + $2 is $total
+# fi
+# exit
+
+
+# echo The number of parameter is $#
+# echo The last parameter is ${!#}
+# exit
+
+
+# echo 
+# echo "Using the \$* method: $*"
+# count=1
+# for param in "$*"
+# do
+# 	echo "\$ Parameter #$count = $param"
+# 	count=$[ $count + 1 ]
+# done
+# echo --------------------------------
+# 
+# echo 
+# echo "Using the \$@ method: $@"
+# count=1
+# for param in "$@"
+# do
+# 	echo "\$@ Parameter #$count = $param"
+# 	count=$[ $count + 1 ]
+# done
+# echo
+# exit
+
+
+# echo 
+# echo "Using the shift method:"
+# count=1
+# while [ -n "$1" ]
+# do
+# 	echo "Parameter #$count = $1"
+# 	count=$[ $count + 1 ]
+# 	shift
+# done
+# echo
+
+
+# echo
+# echo "The orignal parameters: $*"
+# echo "Now shifting 2..."
+# shift 2
+# echo "Here's the new first parameter: $1"
+# echo
+# exit
+
+
+
+# "--" as a special character segmentation argument and a command-line argument
+
+# set -- $(getopt -q ab:cd "$@")
+# 
+# echo 
+# while [ -n "$1" ]
+# do
+# 	case "$1" in
+# 		-a) echo "Found the -a option";;
+# 		-b) param=$2
+# 		    echo "Found the -b option with parameter value $param"
+# 		    shift;;
+# 		-c) echo "Found the -c option";;
+# 		--) shift
+# 		    break;;
+# 		*) echo "$1 is not an option";;
+# 	esac
+# 	shift
+# done
+# 
+# echo 
+# count=1
+# for param in $@
+# do
+# 	echo "Parameter #$count: $param"
+# 	count=$[ $count + 1 ]
+# done
+# echo
+# exit
+
+
+# echo
+# while getopts :ab:c opt
+# do
+# 	case "$opt" in
+# 		a) echo "Found the -a option" ;;
+# 		b) echo "Found the -b option with the parameter value $OPTARG" ;;
+# 		c) echo "Found the -c option" ;;
+# 		*) echo "Unkown option: $opt" ;;
+# 	esac
+# done
+# 
+# shift $[ $OPTIND - 1 ]
+# 
+# echo 
+# count=1
+# for param in "$@"
+# do
+# 	echo "Parameter $count: $param"
+# 	count=$[ $count - 1 ]
+# done
+# 
+# exit
+
+
+# echo -n "Enter your name: "
+# read name
+# echo "Hello $name, welcome to my script."
+# exit
+
+
+# read -p "Please enter your age: " age
+# days=$[ $age * 365 ]
+# echo "That means you are over $days days old!"
+# exit
+
+
+# read -p "Enter your first and last name: " first last
+# echo "Checking data for $last, $first..."
+# exit
+
+# read -p "Enter your name: "
+# echo
+# echo "Hello $REPLY, welcome to my script."
+# exit
+
+
+# if read -t 5 -p "Enter your name: " name
+# then
+# 	echo "Hello $name, welcome to my script."
+# else
+# 	echo
+# 	echo "Sorry, no longer waiting for name."
+# fi
+# exit
+
+
+# read -n 1 -p "Do you want to continue [Y/N]? " answer
+# read -p "Do you want to continue [Y/N]? " answer
+# case $answer in
+# 	Y | y) echo
+#  	       echo "Okay. Continue on...";;
+# 	N | n) echo
+#  	       echo "Okay. Goodbye"
+#  	       exit;;
+# esac
+# 
+# echo "This is the end of the script."
+# exit
+
+
+# read -s -p "Enter your password: " pass
+# echo
+# echo "Your password is $pass"
+# exit
+
+count=1
+cat $HOME/test_shell/log.txt | while read line
+do
+	echo "Line $count: $line"
+	count=$[ $count + 1 ]
+done
+echo "Finished processing the file"
+exit

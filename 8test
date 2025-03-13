@@ -1,0 +1,14 @@
+#!/bin/bash
+var1=110
+var2=10
+
+if [ $var1 -gt $var2 ]
+then
+	echo var1[$var1] is bigger than var2[$var2]
+elif [ $var1 -lt $var2 ]
+then
+	echo var1[$var1] is smaller than var2[$var2]
+else
+	echo  var1[$var1] is equal to var2[$var2]
+fi
+echo outside the if-statement

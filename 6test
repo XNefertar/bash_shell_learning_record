@@ -1,0 +1,31 @@
+#!/bin/bash
+# if ls -al
+# then
+# 	echo It worked
+# else
+# 	echo no such command
+# 	echo please give me a correct command
+# fi
+# echo outside the if statement
+testuser=xx
+
+# if grep $testuser /etc/passwd
+# then
+#  echo "This is my first command in the then block."
+#  echo "This is my second command in the then block."
+#  echo "I can even put in other commands besides echo:"
+#  ls /home/$testuser
+# fi
+# echo "We are outside the if statement"
+
+
+if grep $testuser /etc/passwd
+then
+	echo "The script files in the home directory of $testuser are:"
+	ls /home/$testuser/
+	echo
+else
+	echo "The user $testuser does not exist on this system."
+	echo
+fi
+echo "We are outside the if statement"

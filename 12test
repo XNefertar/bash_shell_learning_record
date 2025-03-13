@@ -1,0 +1,60 @@
+#!/bin/bash
+# for test in Alabama Alaska Arizona Arkansas California Colorado;do echo The next state is $test;done
+ 
+# for test in Alabama Alaska Arizona Arkansas California Colorado
+# do
+# 	echo "The next state is $test"
+# done
+# echo "The last state we visited was $test"
+# test=Connecticut
+# echo "Wait, now we're visiting $test"
+
+# for test in I don\'t know if this\'ll work
+# for test in I "don't" know if this\'ll work
+# do
+# 	echo "word:$test"
+# done
+
+# for test in Nevada "New Hampshire" "New Mexico" "New York"
+# do
+# 	echo "Now going to $test"
+# done
+
+
+# list="Alabama Alaska Arizona Arkansas Cocorado"
+# list=$list" Connecticut"
+# # for state in "$list"
+# for state in $list
+# do
+# 	echo "Have you ever visited $state?"
+# done
+
+
+# OLD=$IFS
+# IFS=$'\n'
+# file="states.txt"
+# 
+# for state in $(cat $file)
+# do
+# 	echo "Visit beautiful $state"
+# done
+# 
+# states=("New York" "New Deli")  # 使用数组存储带空格的字符串
+# for test in "${states[@]}"      # 这样就不会被拆开
+# do
+#     echo "Visit beautiful $test"
+# done
+
+
+for file in /home/xl/* /home/xl/test_shell/*
+do
+	if [ -d "$file" ]
+	then 
+		echo "$file is a direvtory."
+	elif [ -f "$file" ]
+	then
+		echo "$file is a file."
+	else
+		echo "$file can't be identify."
+	fi
+done

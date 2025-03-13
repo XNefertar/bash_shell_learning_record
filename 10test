@@ -1,0 +1,34 @@
+#!/bin/bash
+# echo $BASH_SUBSHELL
+# #
+# if (echo $BASH_SUBSHELL)
+# then
+# 	echo "The subshell command operated successfully."
+# #
+# else
+# 	echo "The subshell command was NOT successful."
+# #
+# fi
+
+
+# if (cat /etc/PSSWORD)
+# then
+# 	echo "The subshell command operated successfully."
+# else
+# 	echo "The subshell command was NOT successful."
+# fi
+
+
+# val1=10
+# if (( $val1 ** 2 > 90 ))
+# then
+# 	(( val2 = $val1 ** 2 ))
+#  	echo "The square of $val1 is $val2,"
+#  	echo "which is greater than 90."
+# fi
+
+
+if [[ $BASH_VERSION == 5.* ]]
+then
+	echo "You're using the Bash Shell version 5 series."
+fi

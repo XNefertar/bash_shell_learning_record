@@ -1,0 +1,16 @@
+date1="Mar 5, 2025"
+date2="May 20, 2017"
+
+time1=$(date -d "$date1" +%s)
+time2=$(date -d "$date2" +%s)
+
+answer=$(bc << EOF
+scale = 4
+dif = ($time1 - $time2)
+hour = (dif / 3600)
+day = (hour / 24)
+year = (day / 365)
+year
+EOF
+)
+echo The gap time is $answer
